@@ -7,17 +7,16 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.util.Duration;
-import org.example.davidmesquitamod5assingment.db.ConnDbOps;
 
 public class Main extends Application {
 
     private Stage primaryStage;
-    private static ConnDbOps cdbop;
 
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
         this.primaryStage.setResizable(false);
+        this.primaryStage.setTitle("Module 5 Assignment");
         showScene1();
 
     }
@@ -34,9 +33,7 @@ public class Main extends Application {
             e.printStackTrace();
         }
     }
-
     FadeTransition fadeIn;
-
     public void changeScene() {
         try {
             Parent newRoot = FXMLLoader.load(getClass().getResource("login.fxml"));
@@ -62,66 +59,5 @@ public class Main extends Application {
             e.printStackTrace();
         }
     }
-
-    /*
-    public static void main(String[] args) {
-        cdbop = new ConnDbOps();
-        Scanner scan = new Scanner(System.in);
-
-        char input;
-        do {
-            System.out.println(" ");
-            System.out.println("============== Menu ==============");
-            System.out.println("| To start GUI,           press 'g' |");
-            System.out.println("| To connect to DB,       press 'c' |");
-            System.out.println("| To display all users,   press 'a' |");
-            System.out.println("| To insert to the DB,    press 'i' |");
-            System.out.println("| To query by name,       press 'q' |");
-            System.out.println("| To exit,                press 'e' |");
-            System.out.println("===================================");
-            System.out.print("Enter your choice: ");
-            input = scan.next().charAt(0);
-
-            switch (input) {
-                case 'g':
-                    launch(args); //GUI
-                    break;
-
-                case 'c':
-                    cdbop.connectToDatabase(); //Your existing method
-                    break;
-                case 'a':
-                    cdbop.listAllUsers(); //all users in DB
-                    break;
-
-                case 'i':
-                    System.out.print("Enter First Name: ");
-                    String firstname = scan.next();
-                    System.out.print("Enter Last Name: ");
-                    String lastname = scan.next();
-                    System.out.print("Enter Department: ");
-                    String dept = scan.next();
-                    System.out.print("Enter Major: ");
-                    String major = scan.next();
-                    cdbop.insertUser(firstname, lastname, dept, major); //Your insertUser method
-                    break;
-                case 'q':
-                    System.out.print("Enter the name to query: ");
-                    String queryName = scan.next();
-                    cdbop.queryUserByName(queryName); //Your queryUserByName method
-                    break;
-                case 'e':
-                    System.out.println("Exiting...");
-                    break;
-                default:
-                    System.out.println("Invalid option. Please try again.");
-            }
-            System.out.println(" ");
-        } while (input != 'e');
-
-        scan.close();
-    }
-    */
-
 
 }

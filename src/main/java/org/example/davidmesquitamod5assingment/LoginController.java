@@ -10,14 +10,14 @@ public class LoginController {
 
     @FXML
     Button btnLogin;
-
+    //method that changes scene
     @FXML
     void login() throws IOException {
         Scene scene = this.btnLogin.getScene();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main.fxml"));
         scene.setRoot(fxmlLoader.load());
     }
-
+    //method that changes scene
     @FXML
     void register() throws IOException {
         Scene scene = this.btnLogin.getScene();

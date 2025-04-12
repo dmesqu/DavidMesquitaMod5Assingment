@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class ConnDbOps {
-
+    //Connects to database
     final String MYSQL_SERVER_URL = "jdbc:mysql://mesqd1.mysql.database.azure.com/";
     final String DB_URL = MYSQL_SERVER_URL+"mesqd1";
     final String USERNAME = "mesqd";
@@ -53,7 +53,7 @@ public class ConnDbOps {
         }
         return hasRegistredUsers;
     }
-
+    //method that querys the database and updates the user in question
     public void updateUser(int id, String firstname, String lastname, String major, String dept) {
         try {
             Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
@@ -93,7 +93,7 @@ public class ConnDbOps {
             e.printStackTrace();
         }
     }
-
+    //method that gets all users in the database and returns it as a list that can be put into the table view
     public ObservableList<Person> getAllUsers() {
         ObservableList<Person> users = FXCollections.observableArrayList();
         try {
@@ -107,7 +107,6 @@ public class ConnDbOps {
                 String lastname = resultSet.getString("lastname");
                 String major = resultSet.getString("major");
                 String dept = resultSet.getString("dept");
-
                 Person user = new Person(id, firstname, lastname, major, dept);
                 users.add(user);
             }
@@ -139,7 +138,7 @@ public class ConnDbOps {
             e.printStackTrace();
         }
     }
-
+    //method that inserts users into the database
     public void insertUser(String firstname, String lastname, String major, String dept) {
         try {
             Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
@@ -159,7 +158,7 @@ public class ConnDbOps {
             e.printStackTrace();
         }
     }
-
+    //method that deletes users from database
     public void deleteUser(int id) {
         try {
             Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);

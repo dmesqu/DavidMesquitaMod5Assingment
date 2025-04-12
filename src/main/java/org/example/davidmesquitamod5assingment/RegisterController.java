@@ -11,14 +11,14 @@ public class RegisterController {
 
     @FXML
     Button btnRegister;
-
+    //method that changes scene
     @FXML
     void login() throws IOException {
         Scene scene = this.btnRegister.getScene();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login.fxml"));
         scene.setRoot(fxmlLoader.load());
     }
-
+    //method that changes scene
     @FXML
     void register() throws IOException {
         Scene scene = this.btnRegister.getScene();

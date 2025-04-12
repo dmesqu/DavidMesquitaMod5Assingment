@@ -1,26 +1,50 @@
 .nav_btn {
-    -fx-background-color:#444;
-    -fx-cursor:hand;
-    -fx-font-family:"Arial";
-    -fx-font-size:14px;
+    -fx-cursor: hand;
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
     -fx-text-alignment: center;
-    -fx-text-fill:#fff;
-    -fx-alignment:CENTER;
-    -fx-background-radius:10;
-    -fx-pref-width:150px;
-    -fx-pref-height:40px;
+    -fx-text-fill: #fff;
+    -fx-alignment: CENTER;
+    -fx-background-radius: 10;
+    -fx-pref-width: 150px;
+    -fx-pref-height: 40px;
 }
 
-.left_pane {
-    -fx-background-color:#f88;
-    -fx-pref-width:150px;
-    -fx-pref-height:600px;
-}
-
-.bottom_pane {
-    -fx-background-color:#f88;
-}
-.profile_pic{
+.profile_pic {
     -fx-stroke: #dedddc;
     -fx-stroke-width: 2;
+}
+
+.light-theme {
+    -fx-background-color: #ffffff;
+}
+
+.light-theme .left_pane {
+    -fx-background-color: #ffffff;
+}
+
+.light-theme .bottom_pane {
+    -fx-background-color: #ffffff;
+}
+
+.light-theme .nav_btn {
+    -fx-background-color: #dddddd;
+    -fx-text-fill: #000000;
+}
+
+.dark-theme {
+    -fx-background-color: #121212;
+}
+
+.dark-theme .left_pane {
+    -fx-background-color: #121212;
+}
+
+.dark-theme .bottom_pane {
+    -fx-background-color: #121212;
+}
+
+.dark-theme .nav_btn {
+    -fx-background-color: #3c3c3c;
+    -fx-text-fill: #ffffff;
 }

@@ -3,9 +3,7 @@
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -18,37 +16,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="807.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.davidmesquitamod5assingment.MainController">
    <children>
-      <BorderPane layoutX="-2.0" layoutY="-1.0" prefHeight="535.0" prefWidth="807.0">
+      <BorderPane layoutX="-2.0" layoutY="-1.0" prefHeight="535.0" prefWidth="807.0" stylesheets="@styling/style.css">
          <top>
-            <MenuBar BorderPane.alignment="CENTER">
-              <menus>
-                <Menu mnemonicParsing="false" text="File">
-                  <items>
-                    <MenuItem mnemonicParsing="false" onAction="#closeApplication" text="Close" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Edit">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="NewMenuItem">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
-                  </items>
-                </Menu>
-                  <Menu mnemonicParsing="false" text="Settings">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="Close" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="Help">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
-                     </items>
-                  </Menu>
-              </menus>
-            </MenuBar>
+            <MenuBar fx:id="m_bar" BorderPane.alignment="CENTER" />
          </top>
          <right>
             <TableView fx:id="tv" onMouseClicked="#selectedItemTV" prefHeight="501.0" prefWidth="507.0" BorderPane.alignment="CENTER">
@@ -66,7 +36,7 @@
                <children>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <ImageView fx:id="img_view" fitHeight="103.0" fitWidth="85.0" layoutX="16.0" layoutY="14.0" onMouseClicked="#showImage" pickOnBounds="true" preserveRatio="true" styleClass="profile_pic">
+                        <ImageView fx:id="img_view" fitHeight="103.0" fitWidth="85.0" layoutX="17.0" layoutY="14.0" onMouseClicked="#showImage" pickOnBounds="true" styleClass="profile_pic">
                            <image>
                               <Image url="@images/profile.png" />
                            </image></ImageView>
